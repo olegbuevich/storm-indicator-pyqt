@@ -46,13 +46,12 @@ class StormIndicator(QMainWindow):
             elif identifier == 'quit':
                 sys.exit(0)
             else:
-                self.shell_emulator.extend(
-                    [
-                        '/bin/bash',
-                        '-c',
-                        'ssh {host}; bash;'.format(host=identifier)
-                    ])
-                self.run_program(self.shell_emulator)
+                command = self.shell_emulator + [
+                    '/bin/bash',
+                    '-c',
+                    'ssh {host}; bash;'.format(host=identifier)
+                ]
+                self.run_program(command)
 
     def add_hosts_menu_items(self, items: dict = None):
         if not isinstance(items, dict):
