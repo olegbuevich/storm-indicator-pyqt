@@ -11,9 +11,10 @@ with open(path.join(HERE, 'README.md'), encoding='utf-8') as f:
 
 setup(
     name='storm-indicator-pyqt',
-    version='1.0',
+    version='1.2',
     description='PyQt based indicator for connecting to your SSH connections easily.',
     long_description=LONG_DESCRIPTION,
+    long_description_content_type="text/markdown",
 
     url='https://github.com/olegbuevich/storm-indicator',
 
@@ -26,7 +27,7 @@ setup(
 
     entry_points={
         'console_scripts': [
-            'ssh-indicator-pyqt = storm_indicator_pyqt.__main__',
+            'ssh-indicator-pyqt=storm_indicator_pyqt:main',
         ]
     },
 
@@ -37,4 +38,12 @@ setup(
         "PyQt5",
         "envparse",
     ],
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: MacOS",
+        "Operating System :: POSIX",
+        "Operating System :: Unix",
+        "Topic :: System :: Systems Administration"
+    ]
 )

@@ -3,3 +3,6 @@
 
 # Linting
 pylint
+
+# package
+twine
