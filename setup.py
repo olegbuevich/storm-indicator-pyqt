@@ -11,7 +11,7 @@ with open(path.join(HERE, 'README.md'), encoding='utf-8') as f:
 
 setup(
     name='storm-indicator-pyqt',
-    version='1.2',
+    version='1.2.1',
     description='PyQt based indicator for connecting to your SSH connections easily.',
     long_description=LONG_DESCRIPTION,
     long_description_content_type="text/markdown",
@@ -27,7 +27,7 @@ setup(
 
     entry_points={
         'console_scripts': [
-            'ssh-indicator-pyqt=storm_indicator_pyqt:main',
+            'ssh-indicator-pyqt=storm_indicator_pyqt.__main__:main',
         ]
     },
 
